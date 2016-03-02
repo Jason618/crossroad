@@ -1,0 +1,266 @@
+/*--------------------css-----------------------*/
+body,html{
+	height: 100%;
+}
+h2{
+	text-align: center;
+}
+.container{
+	height: 100%;
+	height: 600px;
+	width: 800px;
+	margin: 20px auto;
+	position: relative;
+}
+.container >div{
+	text-align: center;
+}
+.leftTop{
+	width: 40%;
+	height: 200px;
+	float: left;
+	background: #189C47;
+	border-bottom-right-radius: 30px;
+}
+.leftBottom{
+	float: left;
+	width: 40%;
+	height: 200px;
+	background: #189C47;
+	border-top-right-radius: 30px;
+}
+.rightTop{
+	float: right;
+	width: 40%;
+	height: 200px;
+	background: #189C47;
+	border-bottom-left-radius: 30px;
+}
+.rightBottom{
+	float: right;
+	width: 40%;
+	height: 200px;
+	background: #189C47;
+	border-top-left-radius: 30px;
+}
+.topMiddle{
+	float: left;
+	height: 200px;
+	width: 20%;
+	background: #988A98;
+	position: relative;
+}
+.footwalkL2R ul{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.footwalkL2R ul li{
+	display: inline-block;
+	float: left;
+	height: 100%;
+	width: 10px;
+}
+.footwalkL2R li:nth-child(2n){
+	background: #999;
+}
+
+.footwalkT2B ul{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.footwalkT2B ul li{
+	display: block;
+	width: 100%;
+	height: 10px;
+}
+.footwalkT2B li:nth-child(2n){
+	background: #999;
+}
+
+.topMiddle .footwalkL2R{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 120px;
+	background: #fff;
+}
+.leftMiddle{
+	float: left;
+	height: 150px;
+	width: 40%;
+	background: #988A98;
+	position: relative;
+}
+.leftMiddle .footwalkT2B{
+	height: 100%;
+	width: 50px;
+	position: relative;
+	left: 240px;
+	top: 0px;
+	background: #fff;
+}
+.rightMiddle{
+	float: right;
+	height: 150px;
+	width: 40%;
+	background: #988A98;
+	position: relative;
+}
+.rightMiddle .footwalkT2B{
+	height: 100%;
+	width: 50px;
+	position: relative;
+	left: 30px;
+	top: 0px;
+	background: #fff;
+}
+.bottomMiddle{
+	float: left;
+	height: 200px;
+	width: 20%;
+	background: #988A98;
+	position: relative;
+}
+.bottomMiddle .footwalkL2R{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 30px;
+	background: #fff;
+}
+
+.dividerLineH{
+	height: 100%;
+	width: 4px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -4px;
+}
+.dividerLineV{
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -4px;
+}
+.directionT2B{
+	height: 60%;
+	width: 50px;
+	position: absolute;
+	color: #fff;
+	font-size: 50px;
+	left: 15px;
+	top: 65px;
+	z-index: 10;
+}
+.directionB2T{
+	height: 60%;
+	width: 50px;
+	position: absolute;
+	color: #fff;
+	font-size: 50px;
+	right: 15px;
+	top: 65px;
+	z-index: 10;
+}
+.directionL2R{
+	width: 40%;
+	height: 50px;
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	left: 80px;
+	top: 15px;
+}
+.directionR2L{
+	width: 40%;
+	height: 50px;
+	color: #fff;
+	font-size: 50px;
+	position: absolute;
+	left: 80px;
+	bottom: 15px;
+}
+.carLightV{
+	height: 40px;
+	width: 10px;
+	position: absolute;
+	background: #000;
+}
+.carLightH{
+	height: 10px;
+	width: 40px;
+	position: absolute;
+	background: #000;
+}
+.redbg,.greenbg,.yellowbg{
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	margin-top: 2px;
+}
+.carLightH > div{
+	float: left;
+	margin-left: 2px;
+	margin-top: 0px;
+}
+.redbg{
+	background: red;
+}
+.greenbg{
+	background: green;
+	visibility: hidden;
+}
+.yellowbg{
+	background: yellow;
+	visibility: hidden;
+}
+.rightMiddle .lightL2R{
+	left: 15px;
+	top: 0px;
+}
+.leftMiddle .lightR2L{
+	bottom: 0px;
+	right: 15px;
+}
+.topMiddle .lightB2T{
+	right: 0px;
+	bottom: 15px;
+}
+.bottomMiddle .lightT2B{
+	left: 0px;
+	top: 15px;
+}
+
+/*===============================css animation===========================*/
+
+@keyframes flicker{
+	from {background: yellow;}
+	to {background: #616147;}
+}
+@keyframes carL2RMove{
+	form{left:0}
+	to{left: 800px}
+}
+
+.flicker{
+	animation: flicker 1s linear 0s 3 alternate;
+}
+
+.car{
+	width: 40px;
+	height: 26px;
+	background: url('car.png') no-repeat center center transparent;
+	display: block;
+	position: absolute;
+}
+.car.directionL2R.move{
+	animation: carL2RMove 10s linear 0s infinite normal;
+}
